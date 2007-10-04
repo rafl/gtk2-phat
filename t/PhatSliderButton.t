@@ -1,4 +1,4 @@
-use Gtk2::TestHelper tests => 9;
+use Gtk2::TestHelper tests => 11;
 
 no warnings;
 
@@ -22,9 +22,11 @@ ok( $b->get_adjustment() == $adj2, 'set/get adjustment' );
 $b->set_increment(4, 10);
 ok( (4, 10) == $b->get_increment(), 'set/get increment' );
 
-$b->set_format("%.0lf", 'prefix', 'postfix');
+$b->set_format(1, 'prefix', 'postfix');
 my @format = $b->get_format();
-ok( $format[0] eq "%.0lf" && $format[1] eq 'prefix' && $format[2] eq 'postfix', 'set/get format' );
+is($format[0], 1, 'set/get format');
+is($format[1], 'prefix', 'set/get format');
+is($format[2], 'postfix', 'set/get format');
 
 $b->set_threshold(10);
 is( $b->get_threshold(), 10, 'set/get threshold' );

@@ -3,21 +3,21 @@
 MODULE = Gtk2::Phat::SliderButton	PACKAGE = Gtk2::Phat::SliderButton	PREFIX = phat_slider_button_
 
 GtkWidget*
-phat_slider_button_new(class, adjustment, format)
+phat_slider_button_new(class, adjustment, digits)
 		GtkAdjustment* adjustment
-		const char* format
+		int digits
 	C_ARGS:
-		adjustment, format
+		adjustment, digits
 
 GtkWidget*
-phat_slider_button_new_with_range(class, value, lower, upper, step, format)
+phat_slider_button_new_with_range(class, value, lower, upper, step, digits)
 		double value
 		double lower
 		double upper
 		double step
-		const char* format
+		int digits
 	C_ARGS:
-		value, lower, upper, step, format
+		value, lower, upper, step, digits
 
 void
 phat_slider_button_set_value(button, value)
@@ -56,14 +56,14 @@ void
 phat_slider_button_get_increment(PhatSliderButton* button, OUTLIST double step, OUTLIST double page)
 
 void
-phat_slider_button_set_format(button, format, prefix, postfix)
+phat_slider_button_set_format(button, digits, prefix, postfix)
 		PhatSliderButton* button
-		const char* format
+		int digits
 		const char* prefix
 		const char* postfix
 
 void
-phat_slider_button_get_format(PhatSliderButton* button, OUTLIST char* format, OUTLIST char* prefix, OUTLIST char* postfix)
+phat_slider_button_get_format(PhatSliderButton* button, OUTLIST int digits, OUTLIST char* prefix, OUTLIST char* postfix)
 
 void
 phat_slider_button_set_threshold(button, threshold)

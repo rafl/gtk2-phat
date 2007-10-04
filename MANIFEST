@@ -1,0 +1,16 @@
+xs/PhatVFanSlider.xs
+xs/PhatSliderButton.xs
+xs/Phat.xs
+xs/PhatHFanSlider.xs
+xs/PhatFanSlider.xs
+pm/Phat.pm
+MANIFEST
+README
+Changes
+maps
+phatperl.h
+Makefile.PL
+META.yml
+t/Phat.t
+t/PhatSliderButton.t
+t/PhatFanSlider.t

@@ -36,7 +36,7 @@ unless (eval "use ExtUtils::Depends;"
 
 mkdir 'build', 0777;
 
-my %pkgconfig = ExtUtils::PkgConfig->find('phat');
+my %pkgconfig = ExtUtils::PkgConfig->find('phat', 'libgnomecanvas-2.0');
 
 Gtk2::CodeGen->parse_maps('phat');
 Gtk2::CodeGen->write_boot(ignore => qr/^Gtk2::Phat$/);
@@ -76,7 +76,7 @@ sub postamble {
 		. Glib::MakeHelper->postamble_docs_full(
 				DEPENDS	=> $main::phat,
 				XS_FILES => \@main::xs_files,
-				COPYRIGHT => 'Copyright (C) 2005 by Florian Ragwitz'
+				COPYRIGHT => 'Copyright (C) 2005, 2006 by Florian Ragwitz'
 		)
 		. Glib::MakeHelper->postamble_rpms(
 				PERL_EXTUTILS_DEPENDS	=> $build_reqs{'perl-ExtUtils-Depends'},
