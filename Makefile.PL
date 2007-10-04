@@ -47,7 +47,7 @@ our $phat = ExtUtils::Depends->new('Gtk2::Phat', 'Gtk2');
 $phat->set_inc($pkgconfig{cflags});
 $phat->set_libs($pkgconfig{libs});
 $phat->add_xs(@xs_files);
-$phat->add_pm('pm/Phat.pm', '$(INST_LIBDIR)/Phat.pm');
+$phat->add_pm('lib/Phat.pm', '$(INST_LIBDIR)/Phat.pm');
 my $cwd = cwd();
 $phat->add_typemaps(map { File::Spec->catfile($cwd, $_) } File::Spec->catfile('build', 'phat.typemap'));
 
@@ -56,10 +56,10 @@ $phat->save_config(File::Spec->catfile('build', 'IFiles.pm'));
 
 WriteMakefile(
 	NAME			=> 'Gtk2::Phat',
-	VERSION_FROM	=> File::Spec->catfile('pm', 'Phat.pm'),
+	VERSION_FROM	=> 'lib/Phat.pm',
 	XSPROTOARG		=> '-noprototypes',
 	MAN3PODS		=> {
-		'pm/Phat.pm'	=> '$(INST_MAN3DIR)/Gtk2::Phat.$(MAN3EXT)',
+		'lib/Phat.pm'	=> '$(INST_MAN3DIR)/Gtk2::Phat.$(MAN3EXT)',
 		Glib::MakeHelper->do_pod_files(@xs_files)
 	},
 	$phat->get_makefile_vars(),
