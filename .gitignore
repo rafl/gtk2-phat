@@ -6,3 +6,5 @@ build
 pm_to_blib
 *.c
 *.o
+Gtk2-Phat-*
+MANIFEST.bak
