@@ -1,6 +1,7 @@
 package Gtk2::Phat;
 
 use strict;
+use warnings;
 use Gtk2;
 require DynaLoader;
 our @ISA = qw(DynaLoader);
