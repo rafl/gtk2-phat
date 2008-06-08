@@ -1,5 +1,5 @@
 ^Gtk2-Phat-
-^\.git
+^\.
 ^blib\b
 ^build\b
 ^Makefile$
