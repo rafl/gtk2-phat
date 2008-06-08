@@ -7,6 +7,7 @@ use inc::Module::Install;
 
 name 'Gtk2-Phat';
 license 'lgpl';
+perl_version '5.008';
 all_from 'lib/Gtk2/Phat.pm';
 
 phat;
