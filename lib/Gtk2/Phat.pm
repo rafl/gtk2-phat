@@ -31,7 +31,7 @@ Florian Ragwitz <rafl@debian.org>
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2005-2007 by Florian Ragwitz
+Copyright (C) 2005-2008 by Florian Ragwitz
 
 This is free software, licensed under:
 
