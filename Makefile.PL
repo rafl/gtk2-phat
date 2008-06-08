@@ -6,6 +6,7 @@ use lib 'ext';
 use inc::Module::Install;
 
 name 'Gtk2-Phat';
+license 'lgpl';
 all_from 'lib/Gtk2/Phat.pm';
 
 phat;
