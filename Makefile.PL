@@ -14,6 +14,8 @@ phat;
 
 requires Gtk2 => 0;
 
+no_index directory => qw/inc ext/;
+
 =for later
 
 find out if refering to an xs file in a provides field is valid. the metayml
