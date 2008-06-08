@@ -13,4 +13,20 @@ phat;
 
 requires Gtk2 => 0;
 
+=for later
+
+find out if refering to an xs file in a provides field is valid. the metayml
+spec isn't very clear on that. cpants analyze fails if you do that. the spec
+also doesn't say if omiting the file field is allowed. cpants reports an error
+if you do so.
+
+    provides map {
+        ("Gtk2::Phat::$_" => { file => "xs/${_}.xs" })
+    } (map {
+        my $t = $_;
+        map { $_ . $t } ('', qw/H V/)
+    } qw/FanSlider Keyboard/), 'SliderButton';
+
+=cut
+
 WriteAll;
