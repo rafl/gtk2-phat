@@ -50,7 +50,11 @@ sub postamble {
 				DEPENDS	=> $Module::Install::PRIVATE::Phat::phat,
 				XS_FILES => \@Module::Install::PRIVATE::Phat::xs_files,
 				COPYRIGHT => 'Copyright (C) 2005-2008 by Florian Ragwitz'
-		);
+		)
+        . <<"EOM"
+README: lib/Gtk2/Phat.pm
+\tpod2text \$< > \$@
+EOM
 }
 
 1;
