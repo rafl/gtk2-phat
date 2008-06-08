@@ -1,15 +1,18 @@
-package Gtk2::Phat;
-
 use strict;
 use warnings;
+
+package Gtk2::Phat;
+
 use Gtk2;
-require DynaLoader;
+
 our @ISA = qw(DynaLoader);
 our $VERSION = '0.03';
 
+require DynaLoader;
+
 sub dl_load_flags { 0x01 };
 
-bootstrap Gtk2::Phat $VERSION;
+Gtk2::Phat->bootstrap($VERSION);
 
 =head1 NAME
 
