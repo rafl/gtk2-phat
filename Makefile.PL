@@ -30,5 +30,7 @@ if you do so.
 
 =cut
 
+extra_tests;
 auto_provides;
+
 WriteAll;
