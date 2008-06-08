@@ -21,6 +21,8 @@ configure_requires 'Glib::MakeHelper';
 configure_requires 'ExtUtils::Depends';
 configure_requires 'ExtUtils::PkgConfig';
 
+test_requires 'Gtk2::TestHelper';
+
 no_index directory => qw/inc ext/;
 
 =for later
