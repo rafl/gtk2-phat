@@ -4,7 +4,7 @@ use warnings;
 package Gtk2::Phat;
 
 our @ISA = qw(DynaLoader);
-our $VERSION = '0.04';
+our $VERSION = '0.05';
 
 require DynaLoader;
 
