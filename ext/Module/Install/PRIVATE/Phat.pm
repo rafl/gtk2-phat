@@ -30,7 +30,7 @@ sub phat {
     $phat->set_inc($pkgconfig{cflags});
     $phat->set_libs($pkgconfig{libs});
     $phat->add_xs(@xs_files);
-#    $phat->add_pm('lib/Phat.pm', '$(INST_LIBDIR)/Phat.pm');
+    $phat->add_pm('lib/Gtk2/Phat.pm', '$(INST_LIBDIR)/Phat.pm');
     my $cwd = cwd();
     $phat->add_typemaps(map { File::Spec->catfile($cwd, $_) } File::Spec->catfile('build', 'phat.typemap'));
 
