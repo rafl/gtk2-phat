@@ -2,6 +2,8 @@
 
 MODULE = Gtk2::Phat::VFanSlider	PACKAGE = Gtk2::Phat::VFanSlider	PREFIX = phat_vfan_slider_
 
+PROTOTYPES: DISABLE
+
 GtkWidget *
 phat_vfan_slider_new (class, adjustment)
 		GtkAdjustment *adjustment

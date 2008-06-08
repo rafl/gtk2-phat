@@ -2,6 +2,8 @@
 
 MODULE = Gtk2::Phat::SliderButton	PACKAGE = Gtk2::Phat::SliderButton	PREFIX = phat_slider_button_
 
+PROTOTYPES: DISABLE
+
 GtkWidget *
 phat_slider_button_new (class, adjustment, digits)
 		GtkAdjustment *adjustment

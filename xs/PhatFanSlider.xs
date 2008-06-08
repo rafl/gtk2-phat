@@ -2,6 +2,8 @@
 
 MODULE = Gtk2::Phat::FanSlider	PACKAGE = Gtk2::Phat::FanSlider	PREFIX = phat_fan_slider_
 
+PROTOTYPES: DISABLE
+
 void
 phat_fan_slider_set_value (slider, value)
 		PhatFanSlider *slider
