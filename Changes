@@ -1,3 +1,19 @@
+0.04    Sun, 08 Jun 2008 15:32:11 +0200
+        * Update README.
+        * Add a Makefile target for README generation.
+        * Don't use Gtk2;
+        * Some reformatting.
+        * Update copyright notices.
+        * Update license to LGPL 2.1.
+        * use warnings;
+        * Specify the required perl version in META.yml.
+        * Add provides to META.yml.
+        * Specify license in Makefile.PL.
+        * Ignore *.old for MANIFEST generation.
+        * Ignore all dotfiles, not just .git for MANIFEST generation.
+        * Specify prototyping behaviour in the xs files.
+        * Switch to Module::Install.
+
 0.03    Thu, 04 Oct 2007 05:38:55 +0200
         * Bind [VH]Keyboard.
         * Some minor, not user-visible improvements.
