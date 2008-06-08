@@ -29,4 +29,5 @@ if you do so.
 
 =cut
 
+auto_provides;
 WriteAll;
