@@ -37,7 +37,12 @@ sub phat {
     $phat->install(File::Spec->catfile('build', 'phat-autogen.h'));
     $phat->save_config(File::Spec->catfile('build', 'IFiles.pm'));
 
-    $self->makemaker_args( $phat->get_makefile_vars );
+    $self->makemaker_args(
+        $phat->get_makefile_vars,
+        MAN3PODS => {
+            Glib::MakeHelper->do_pod_files(@xs_files),
+        },
+    );
 }
 
 
