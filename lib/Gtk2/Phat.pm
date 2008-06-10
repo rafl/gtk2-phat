@@ -3,6 +3,8 @@ use warnings;
 
 package Gtk2::Phat;
 
+use Gtk2;
+
 our @ISA = qw(DynaLoader);
 our $VERSION = '0.06';
 
