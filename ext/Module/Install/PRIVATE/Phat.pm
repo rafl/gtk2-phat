@@ -19,7 +19,15 @@ sub phat {
 
     mkdir 'build', 0777;
 
-    my %pkgconfig = ExtUtils::PkgConfig->find('phat', 'libgnomecanvas-2.0');
+    my %pkgconfig;
+    eval {
+       %pkgconfig = ExtUtils::PkgConfig->find('phat', 'libgnomecanvas-2.0');
+    };
+
+    if (my $error = $@) {
+        print STDERR $error;
+        return;
+    }
 
     Gtk2::CodeGen->parse_maps('phat');
     Gtk2::CodeGen->write_boot(ignore => qr/^Gtk2::Phat$/);
@@ -43,6 +51,8 @@ sub phat {
             Glib::MakeHelper->do_pod_files(@xs_files),
         },
     );
+
+    return 1;
 }
 
 
